@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cit265_Bennett_I_A6", "Cit265_Bennett_I_A6\Cit265_Bennett_I_A6.csproj", "{C983FE87-D32A-455A-993A-8159E4EA601D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C983FE87-D32A-455A-993A-8159E4EA601D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C983FE87-D32A-455A-993A-8159E4EA601D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C983FE87-D32A-455A-993A-8159E4EA601D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C983FE87-D32A-455A-993A-8159E4EA601D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49980642-1656-40C4-BD6B-37760D8B0F6F}
+	EndGlobalSection
+EndGlobal
