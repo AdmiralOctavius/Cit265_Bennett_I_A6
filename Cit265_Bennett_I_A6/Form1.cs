@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Cit265_Bennett_I_A6
 {
+    
     public partial class Form1 : Form
     {
+        public List<TaskItem> listOfTask = new List<TaskItem>();
         public Form1()
         {
+             
             InitializeComponent();
             //Is this the start of the function?
             //If so open the file and load the list
             //If no file found, create list from scratch
+           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,6 +39,16 @@ namespace Cit265_Bennett_I_A6
         {
             //Need to create a struct that contains a date and string
             //Clear date and text boxes upon submit
+
+            TaskItem newItem;
+            newItem = new TaskItem();
+            newItem.ItemName = textBox1.Text;
+            newItem.ItemDate = dateTimePicker1.Value;
+            Console.WriteLine(newItem.ItemName + " : " + newItem.ItemDate);
+            string outputText = newItem.ItemName + " : " + newItem.ItemDate;
+            label1.Text = outputText;
+
+            listOfTask.Add(newItem);
         }
 
         private void button4_Click(object sender, EventArgs e)
