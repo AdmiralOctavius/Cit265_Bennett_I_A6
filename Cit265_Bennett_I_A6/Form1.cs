@@ -16,13 +16,16 @@ namespace Cit265_Bennett_I_A6
         public List<TaskItem> listOfTask = new List<TaskItem>();
         public Form1()
         {
-             
+            //Thanks to: https://stackoverflow.com/questions/2675067/binding-listbox-to-listobject for this function call
+            
+            listOfTask = new List<TaskItem>();
             InitializeComponent();
             //Is this the start of the function?
             //If so open the file and load the list
             //If no file found, create list from scratch
-           
-
+            listBox1.DataSource = null;
+            listBox1.DataSource = listOfTask;
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,6 +52,9 @@ namespace Cit265_Bennett_I_A6
             label1.Text = outputText;
 
             listOfTask.Add(newItem);
+            label1.Text = (listOfTask[listOfTask.Count -1].ItemName + " " + listOfTask[listOfTask.Count -1].ItemDate);
+            listBox1.Refresh();
+            //listBox1.Items.Add(newItem);
         }
 
         private void button4_Click(object sender, EventArgs e)

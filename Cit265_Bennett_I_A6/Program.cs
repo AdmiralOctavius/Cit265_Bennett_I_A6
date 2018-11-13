@@ -32,12 +32,12 @@ namespace Cit265_Bennett_I_A6
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static List<TaskItem> taskList();
+        
         [STAThread]
         static void Main()
         {
 
-            taskList = new List<TaskItem>();
+            
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

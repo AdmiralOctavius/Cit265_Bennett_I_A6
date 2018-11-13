@@ -58,6 +58,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.DisplayMember = "TaskItem.TaskName";
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 86);
             this.listBox1.Name = "listBox1";
