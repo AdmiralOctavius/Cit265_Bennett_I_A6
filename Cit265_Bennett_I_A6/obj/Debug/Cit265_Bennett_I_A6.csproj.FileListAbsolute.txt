@@ -8,3 +8,13 @@ C:\Users\Isaac\Documents\GitHub\Csharp2018\Cit265_Bennett_I_A6\Cit265_Bennett_I_
 C:\Users\Isaac\Documents\GitHub\Csharp2018\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.csproj.CoreCompileInputs.cache
 C:\Users\Isaac\Documents\GitHub\Csharp2018\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.exe
 C:\Users\Isaac\Documents\GitHub\Csharp2018\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.pdb
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\bin\Debug\Cit265_Bennett_I_A6.exe.config
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\bin\Debug\Cit265_Bennett_I_A6.exe
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\bin\Debug\Cit265_Bennett_I_A6.pdb
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.csprojAssemblyReference.cache
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.Form1.resources
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.Properties.Resources.resources
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.csproj.GenerateResource.cache
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.csproj.CoreCompileInputs.cache
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.exe
+C:\Users\bennett253\source\repos\Cit265_Bennett_I_A6\Cit265_Bennett_I_A6\obj\Debug\Cit265_Bennett_I_A6.pdb

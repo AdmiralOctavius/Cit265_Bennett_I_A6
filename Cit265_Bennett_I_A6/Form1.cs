@@ -15,13 +15,17 @@ namespace Cit265_Bennett_I_A6
     public partial class Form1 : Form
     {
         public BindingList<TaskItem> listOfTask = new BindingList<TaskItem>();
+        public BindingList<TaskItem> NameSorted = new BindingList<TaskItem>();
+        public BindingList<TaskItem> DateSorted = new BindingList<TaskItem>();
 
         private StreamWriter fileWriter;
         private StreamReader fileReader;
 
         public string fileName = "TestFile.txt";
 
-        public bool newFile = true;
+        public bool nameSortedInv = true;
+        public bool dateSortedInv = true;
+
         public Form1()
         {
             //Thanks to: https://stackoverflow.com/questions/2675067/binding-listbox-to-listobject for this function call
@@ -39,7 +43,7 @@ namespace Cit265_Bennett_I_A6
             //var output = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
             try
             {
-                FileStream input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                FileStream input = new FileStream(fileName, FileMode.Open, FileAccess.ReadWrite);
 
                 fileReader = new StreamReader(input);
 
@@ -62,7 +66,7 @@ namespace Cit265_Bennett_I_A6
             }
             catch(IOException)
             {
-                var output = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
+                var output = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
                 fileWriter = new StreamWriter(output);
                 
                 
@@ -74,12 +78,69 @@ namespace Cit265_Bennett_I_A6
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            NameSorted.Clear();
             //Sort by linq name
+            if (nameSortedInv)
+            {
+                var nameSorted = from task in listOfTask orderby task.ItemName select task;
+                foreach(var t in nameSorted)
+                {
+                    Console.WriteLine(t.ItemName);
+                    NameSorted.Add(t);
+                }
+                nameSortedInv = false;
+            }
+            else
+            {
+                var nameSorted = from task in listOfTask orderby task.ItemName descending select task;
+                foreach (var t in nameSorted)
+                {
+                    Console.WriteLine(t.ItemName);
+                    NameSorted.Add(t);
+                }
+                nameSortedInv = true;
+            }
+
+            listBox1.DataSource = null;
+            listBox1.DataSource = NameSorted;
+            listBox1.Refresh();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             //Sort by linq date
+
+            DateSorted.Clear();
+            
+            if (dateSortedInv)
+            {
+                var dateSorted = from task in listOfTask orderby task.ItemDate select task;
+                foreach (var t in dateSorted)
+                {
+                    Console.WriteLine(t.ItemDate);
+                    DateSorted.Add(t);
+                }
+                dateSortedInv = false;
+            }
+            else
+            {
+                var dateSorted = from task in listOfTask orderby task.ItemDate descending select task;
+                foreach (var t in dateSorted)
+                {
+                    Console.WriteLine(t.ItemDate);
+                    DateSorted.Add(t);
+                }
+                dateSortedInv = true;
+            }
+
+            
+
+            listBox1.DataSource = null;
+            listBox1.DataSource = DateSorted;
+            listBox1.Refresh();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -100,7 +161,8 @@ namespace Cit265_Bennett_I_A6
             listBox1.Refresh();
             label2.Text = listBox1.DataBindings.ToString();
             //listBox1.Items.Add(newItem);
-
+            textBox1.ResetText();
+            dateTimePicker1.ResetText();
             
             fileWriter.WriteLine($"{listOfTask[listOfTask.Count - 1].ItemName},{listOfTask[listOfTask.Count - 1].ItemDate}");
             //File.AppendAllText(fileName, $"{listOfTask[listOfTask.Count - 1].ItemName},{listOfTask[listOfTask.Count - 1].ItemDate}" + Environment.NewLine);
@@ -140,6 +202,23 @@ namespace Cit265_Bennett_I_A6
         private void button5_Click(object sender, EventArgs e)
         {
             //Remove selected item from list
+            listOfTask.RemoveAt(listBox1.SelectedIndex);
+
+            fileWriter.Close();
+            var output = new FileStream(fileName, FileMode.Truncate, FileAccess.ReadWrite);
+            fileWriter = new StreamWriter(output);
+            for(int i = 0; i < listOfTask.Count; i++)
+            {
+                fileWriter.WriteLine($"{listOfTask[i].ItemName},{listOfTask[i].ItemDate}");
+            }
+            fileWriter.Close();
+
+            fileWriter = new StreamWriter(fileName, append: true);
+
+            listBox1.Refresh();
+            
         }
+
+        
     }
 }
