@@ -23,6 +23,12 @@ namespace Cit265_Bennett_I_A6
             set { itemDate = value; }
         }
         
+        public override string ToString()
+        {
+            string value;
+            value = ItemName + " " + itemDate.ToShortDateString();
+            return value;
+        }
     }
 
 
@@ -38,6 +44,7 @@ namespace Cit265_Bennett_I_A6
         {
 
             
+
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
