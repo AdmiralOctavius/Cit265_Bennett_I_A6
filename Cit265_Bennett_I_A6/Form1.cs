@@ -55,8 +55,10 @@ namespace Cit265_Bennett_I_A6
                 }
 
 
-                var output = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
-                fileWriter = new StreamWriter(output);
+                fileReader.Close();
+
+                //var output = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
+                fileWriter = new StreamWriter(fileName, append: true);
             }
             catch(IOException)
             {
@@ -101,6 +103,7 @@ namespace Cit265_Bennett_I_A6
 
             
             fileWriter.WriteLine($"{listOfTask[listOfTask.Count - 1].ItemName},{listOfTask[listOfTask.Count - 1].ItemDate}");
+            //File.AppendAllText(fileName, $"{listOfTask[listOfTask.Count - 1].ItemName},{listOfTask[listOfTask.Count - 1].ItemDate}" + Environment.NewLine);
         }
 
         private void button4_Click(object sender, EventArgs e)
