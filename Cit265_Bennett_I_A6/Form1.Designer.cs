@@ -47,7 +47,7 @@
             this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Add Tasks here!";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+    
             // 
             // dateTimePicker1
             // 
@@ -55,7 +55,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 1;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+           
             // 
             // listBox1
             // 
@@ -66,7 +66,7 @@
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(247, 147);
             this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+        
             // 
             // button1
             // 
